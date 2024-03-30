@@ -1,0 +1,491 @@
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="../public/style.css" rel="stylesheet" />
+      <title> E-Scrap Recycling </title>
+      <style>
+         @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+html,body{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  background: -webkit-linear-gradient(left, #9896F0,#FBC8D5);
+}
+::selection{
+  background: #12e8f0;
+  color: #fff;
+}
+.wrapper{
+  overflow: hidden;
+  max-width: 390px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+}
+.wrapper .title-text{
+  display: flex;
+  width: 200%;
+}
+.wrapper .title{
+  width: 50%;
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.wrapper .slide-controls{
+  position: relative;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  overflow: hidden;
+  margin: 30px 0 10px 0;
+  justify-content: space-between;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
+.slide-controls .slide{
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 48px;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.6s ease;
+}
+.slide-controls label.signup{
+  color: #000;
+}
+.slide-controls .slider-tab{
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  left: 0;
+  z-index: 0;
+  border-radius: 5px;
+  background: -webkit-linear-gradient(left, #FBEE97, #ADEDD5);
+  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+input[type="radio"]{
+  display: none;
+}
+#signup:checked ~ .slider-tab{
+  left: 50%;
+}
+#signup:checked ~ label.signup{
+  color: #fff;
+  cursor: default;
+  user-select: none;
+}
+#signup:checked ~ label.login{
+  color: #000;
+}
+#login:checked ~ label.signup{
+  color: #000;
+}
+#login:checked ~ label.login{
+  cursor: default;
+  user-select: none;
+}
+.wrapper .form-container{
+  width: 100%;
+  overflow: hidden;
+}
+.form-container .form-inner{
+  display: flex;
+  width: 200%;
+}
+.form-container .form-inner form{
+  width: 50%;
+  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.form-inner form .field{
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+}
+.form-inner form .field input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 15px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  border-bottom-width: 2px;
+  font-size: 17px;
+  transition: all 0.3s ease;
+}
+.form-inner form .field input:focus{
+  border-color: #12e8f0;
+}
+.form-inner form .field input::placeholder{
+  color: #999;
+  transition: all 0.3s ease;
+}
+form .field input:focus::placeholder{
+  color: #b3b3b3;
+}
+.form-inner form .pass-link{
+  margin-top: 5px;
+}
+.form-inner form .signup-link{
+  text-align: center;
+  margin-top: 30px;
+}
+.form-inner form .pass-link a,
+.form-inner form .signup-link a{
+  color: #0e45dd;
+  text-decoration: none;
+}
+.form-inner form .pass-link a:hover,
+.form-inner form .signup-link a:hover{
+  text-decoration: underline;
+}
+form .btn{
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+form .btn .btn-layer{
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  background: -webkit-linear-gradient(right, #FBEE97, #ADEDD5, #FBEE97, #ADEDD5);
+  border-radius: 5px;
+  transition: all 0.4s ease;;
+}
+form .btn:hover .btn-layer{
+  left: 0;
+}
+form .btn input[type="submit"]{
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  position: relative;
+  background: none;
+  border: none;
+  color: #fff;
+  padding-left: 0;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.maintitle {
+   font-size: 50px;
+   font-weight: 400;
+   ;
+ }
+ 
+ p {
+   font-size: 17px;
+   color: #373f46;
+ }
+ 
+ header {
+   padding-bottom: 18px;
+ }
+ 
+ 
+ section h1 {
+   margin-top: 18px;
+ }
+ 
+ nav {
+   background-color: rgb(0, 140, 255);
+   overflow: hidden;
+ }
+ 
+ .topnav {
+   width: 1000px;
+ }
+ 
+ nav a {
+   float: left;
+   color: #f2f2f2;
+   margin: auto;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+   font-size: 17px;
+   font-weight: 600;
+ }
+ 
+ nav a:hover {
+   background-color: rgb(0, 195, 255);
+   color: black;
+ }
+ 
+ body {
+   margin: 0px;
+   font-family: 'Karla', sans-serif;
+ }
+ 
+ a {
+   color: #42a2ff;
+   font-weight: 600;
+ }
+ 
+ a:hover {
+   color: #ff711f;
+   font-weight: 600;
+ }
+ 
+ main {
+   width: 90%;
+   max-width: 1200px;
+   ;
+   margin: auto;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   padding: 10px;
+   background-color: white;
+ }
+ 
+ h2 {
+   margin-top: 5px;
+   font-size: 24px;
+ }
+ 
+ section {
+   margin: 10px;
+ }
+ 
+ .article {
+   margin: 10px;
+   padding: 25px;
+   padding-top: 1px;
+   background-color: #f3f3f3;
+   border: 1px solid #cad2d9;
+   text-align: center;
+ }
+ 
+ .articlepage {
+   width: 950px !important;
+ }
+ 
+ label {
+   font-size: 16px;
+ }
+ 
+ input,
+ textarea {
+   width: 100%;
+   padding: 10px;
+   margin-top: 6px;
+   margin-bottom: 9px;
+   border: none;
+   background-color: whitesmoke;
+ }
+ 
+ .btn {
+   background-color: #42a2ff;
+   font-weight: 600;
+   font-size: 17px;
+   color: white;
+   padding: 14px;
+ }
+ 
+ .btn:hover {
+   background-color: #042342;
+   font-weight: 600;
+   font-size: 17px;
+   color: white;
+   padding: 11px;
+   border: 3px solid dodgerblue;
+ }
+ 
+ button {
+   background-color: #42a2ff;
+   font-weight: 600;
+   font-size: 17px;
+   color: white;
+   padding: 14px;
+   padding: 14px;
+   border: none;
+   width: 50%;
+   margin-top: 10px;
+ }
+ 
+ button:hover {
+   background-color: #042342;
+   font-weight: 600;
+   font-size: 17px;
+   color: white;
+   padding: 11px;
+   border: 3px solid dodgerblue;
+ }
+ 
+ footer {
+   background-color: rgb(26, 65, 105);
+   text-align: center;
+   padding-bottom: 1px;
+   padding-top: 13px;
+ }
+ 
+ footer p {
+   padding: 0px;
+   margin: 15px;
+   color: white;
+ }
+ 
+ footer table {
+   color: white;
+ }
+ 
+ .tabletitle {
+   font-size: 18px;
+   font-weight: 600;
+   padding-bottom: 10px;
+ }
+ 
+ li {
+   margin-left: -23px;
+   margin-bottom: 6px;
+ }
+ 
+ ul {
+   margin-top: 14px;
+ }
+      </style>
+   </head>
+   <header>
+      <center>
+       <a href="index.html">  <img src="" width="350"></a>
+      </center>
+   </header>
+   
+   <nav>
+      <center>
+      <div class=topnav>
+         <a href="#">Home</a>
+         <a href="page1.html">What is E-Waste?</a>
+         <a href="page2.html">Reasons for recycling
+         </a>
+         <a href="page4.html">Recycling Process
+         </a>
+         <a href="page3.html">Hazardous Disposal Processes
+         </a>
+         <form action="./Sign-Up-and-Login-Page-main/form.html">
+            <input type="submit"  style="width: auto;" value="Login">
+         </form>
+      </div>
+   </nav>
+   <main>
+      <table border="0">
+         <tr>
+            <td>
+               <section class="article" style="width:777px">
+                  <h1 style="font-size: 36px; border-bottom: 2px solid dodgerblue;">
+                     <center> What is e-Waste? </center>
+                  </h1>
+                  <p>
+                     Electronic waste, e-waste, e-scrap, or Electronic-disposal, waste electrical and electronic equipment (WEEE) describes discarded electrical or electronic devices.
+                  </p>
+                  <center> <a href="page1.html"><button> Read More in Detail </button></a></center>
+               </section>
+            </td>
+            <td  rowspan="2" >
+               <section class="article" style="height:468px">
+                  <h1 style="font-size: 36px; border-bottom: 2px solid dodgerblue;">
+                     <center> Hazardous Disposal Processes   </center>
+                  </h1>
+                  <p>
+                     Incineration is the process of destroying waste through burning. Because of the variety of substances found in e-waste, incineration is associated with a major risk of generating and dispersing contaminants and toxic substances. The gases released during the burning and the residue ash is often toxic.
+                  </p>
+                  <center> <a href="page3.html"><button> Read More in Detail </button></a></center>
+               </section>
+            </td>
+         </tr>
+         <tr>
+            <td  width="">
+               <section class="article">
+                  <h1 style="font-size: 36px; border-bottom: 2px solid dodgerblue;">
+                     <center> Reasons for recycling   </center>
+                  </h1>
+                  <p>
+                     Obsolete electronics are valuable source for secondary raw materials, if treated properly; if not, they are a source of toxins and carcinogens. 
+                  </p>
+                  <center> <a href="page2.html"><button> Read More in Detail </button></a></center>
+               </section>
+            </td>
+         </tr>
+      </table>
+      <section>
+         <h1 style="font-size: 36px;font-weight: 400;">
+         Please fill out form to dispose off your e-Waste 
+         <h1>
+         <form method="get">
+            <fieldset>
+               <legend>
+                  <h2 style="color:#2495ff;"> E-Waste disposal Form </h2>
+               </legend>
+               <label for="name" class="mylabel">Your Name* </label> <br>
+               <input type="text" id="fname" name="Name" placeholder="Your Good Name"> 
+               <br>
+               <label for="email" class="mylabel">Email* </label> <br>
+               <input type="email" id="email" name="Email" placeholder="xyz@email.com" ><br>
+               <label for="tel" class="mylabel">Phone No* </label> <br>
+               <input type="tel" id="phone" name="Phone" placeholder="1234567890" value="+91 " maxlength="14"><br>
+               <label for="msg" class="mylabel">What e-Waste do you want to Dispose Of?*</label> <br>
+               <textarea name="message" rows="7" cols="73"> </textarea>
+               <br>
+               {{!-- <input type="submit" class="btn" value="Submit Form"> --}}
+                <button type="submit" class="btn">Sign up</button>
+               <input type="reset" class="btn" value="Reset Form">
+            </fieldset>
+         </form>
+      </section>
+   </main>
+   <footer>
+      <center>
+         <table border="0" width="900px">
+            <tr>
+               <td class="tabletitle" rowspan="3"> <a href="index.html"> <img src="../public/imaes/Logo2.png" width="250px"></a> 
+               </td>
+               <td class="tabletitle">Checkout Top Articles
+               </td>
+               <td class="tabletitle">Contact Details
+               </td>
+            </tr>
+            <tr>
+               <td >
+                  <ul type="circle">
+                     <li> <a href="page1.html">  What is e-Waste?</a>     </li>
+                     <li> <a href="page2.html"> Reasons for recycling</a>       </li>
+                     <li> <a href="page3.html"> Hazardous Disposal Processes</a> 
+                     </li>
+                     <li> <a href="page4.html">Recycling Process</a> 
+                     </li>
+                  </ul>
+               </td>
+               <td>Name: Tirth Patel <br>
+                  Name:  Ravi Patel <br>
+                  Name: Hetvi Mehta <br>
+                  Contact: 1234567890<br>
+                  Mail: 123@gmail.com<br>
+                 
+               </td>
+            </tr>
+         </table>
+      </center>
+      <br>
+      <p>© 2024 E-Scrap Recycling | All Rights Reserved</p>
+   </footer>
+   </body>
+</html>

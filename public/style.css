@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+html,body{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  background: -webkit-linear-gradient(left, #9896F0,#FBC8D5);
+}
+::selection{
+  background: #12e8f0;
+  color: #fff;
+}
+.wrapper{
+  overflow: hidden;
+  max-width: 390px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+}
+.wrapper .title-text{
+  display: flex;
+  width: 200%;
+}
+.wrapper .title{
+  width: 50%;
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.wrapper .slide-controls{
+  position: relative;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  overflow: hidden;
+  margin: 30px 0 10px 0;
+  justify-content: space-between;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
+.slide-controls .slide{
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 48px;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.6s ease;
+}
+.slide-controls label.signup{
+  color: #000;
+}
+.slide-controls .slider-tab{
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  left: 0;
+  z-index: 0;
+  border-radius: 5px;
+  background: -webkit-linear-gradient(left, #FBEE97, #ADEDD5);
+  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+input[type="radio"]{
+  display: none;
+}
+#signup:checked ~ .slider-tab{
+  left: 50%;
+}
+#signup:checked ~ label.signup{
+  color: #fff;
+  cursor: default;
+  user-select: none;
+}
+#signup:checked ~ label.login{
+  color: #000;
+}
+#login:checked ~ label.signup{
+  color: #000;
+}
+#login:checked ~ label.login{
+  cursor: default;
+  user-select: none;
+}
+.wrapper .form-container{
+  width: 100%;
+  overflow: hidden;
+}
+.form-container .form-inner{
+  display: flex;
+  width: 200%;
+}
+.form-container .form-inner form{
+  width: 50%;
+  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.form-inner form .field{
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+}
+.form-inner form .field input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 15px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  border-bottom-width: 2px;
+  font-size: 17px;
+  transition: all 0.3s ease;
+}
+.form-inner form .field input:focus{
+  border-color: #12e8f0;
+}
+.form-inner form .field input::placeholder{
+  color: #999;
+  transition: all 0.3s ease;
+}
+form .field input:focus::placeholder{
+  color: #b3b3b3;
+}
+.form-inner form .pass-link{
+  margin-top: 5px;
+}
+.form-inner form .signup-link{
+  text-align: center;
+  margin-top: 30px;
+}
+.form-inner form .pass-link a,
+.form-inner form .signup-link a{
+  color: #0e45dd;
+  text-decoration: none;
+}
+.form-inner form .pass-link a:hover,
+.form-inner form .signup-link a:hover{
+  text-decoration: underline;
+}
+form .btn{
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+form .btn .btn-layer{
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  background: -webkit-linear-gradient(right, #FBEE97, #ADEDD5, #FBEE97, #ADEDD5);
+  border-radius: 5px;
+  transition: all 0.4s ease;;
+}
+form .btn:hover .btn-layer{
+  left: 0;
+}
+form .btn input[type="submit"]{
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  position: relative;
+  background: none;
+  border: none;
+  color: #fff;
+  padding-left: 0;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.maintitle {
+   font-size: 50px;
+   font-weight: 400;
+   ;
+ }
+ 
+ p {
+   font-size: 17px;
+   color: #373f46;
+ }
+ 
+ header {
+   padding-bottom: 18px;
+ }
+ 
+ 
+ section h1 {
+   margin-top: 18px;
+ }
+ 
+ nav {
+   background-color: rgb(0, 140, 255);
+   overflow: hidden;
+ }
+ 
+ .topnav {
+   width: 1000px;
+ }
+ 
+ nav a {
+   float: left;
+   color: #f2f2f2;
+   margin: auto;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+   font-size: 17px;
+   font-weight: 600;
+ }
+ 
+ nav a:hover {
+   background-color: rgb(0, 195, 255);
+   color: black;
+ }
+ 
+ body {
+   margin: 0px;
+   font-family: 'Karla', sans-serif;
+ }
+ 
+ a {
+   color: #42a2ff;
+   font-weight: 600;
+ }
+ 
+ a:hover {
+   color: #ff711f;
+   font-weight: 600;
+ }
+ 
+ main {
+   width: 90%;
+   max-width: 1200px;
+   ;
+   margin: auto;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   padding: 10px;
+   background-color: white;
+ }
+ 
+ h2 {
+   margin-top: 5px;
+   font-size: 24px;
+ }
+ 
+ section {
+   margin: 10px;
+ }
+ 
+ .article {
+   margin: 10px;
+   padding: 25px;
+   padding-top: 1px;
+   background-color: #f3f3f3;
+   border: 1px solid #cad2d9;
+   text-align: center;
+ }
+ 
+ .articlepage {
+   width: 950px !important;
+ }
+ 
+ label {
+   font-size: 16px;
+ }
+ 
+ input,
+ textarea {
+   width: 100%;
+   padding: 10px;
+   margin-top: 6px;
+   margin-bottom: 9px;
+   border: none;
+   background-color: whitesmoke;
+ }
+ 
+ .btn {
+   background-color: #42a2ff;
+   font-weight: 600;
+   font-size: 17px;
+   color: white;
+   padding: 14px;
+ }
+ 
+ .btn:hover {
+   background-color: #042342;
+   font-weight: 600;
+   font-size: 17px;
+   color: white;
+   padding: 11px;
+   border: 3px solid dodgerblue;
+ }
+ 
+ button {
+   background-color: #42a2ff;
+   font-weight: 600;
+   font-size: 17px;
+   color: white;
+   padding: 14px;
+   padding: 14px;
+   border: none;
+   width: 50%;
+   margin-top: 10px;
+ }
+ 
+ button:hover {
+   background-color: #042342;
+   font-weight: 600;
+   font-size: 17px;
+   color: white;
+   padding: 11px;
+   border: 3px solid dodgerblue;
+ }
+ 
+ footer {
+   background-color: rgb(26, 65, 105);
+   text-align: center;
+   padding-bottom: 1px;
+   padding-top: 13px;
+ }
+ 
+ footer p {
+   padding: 0px;
+   margin: 15px;
+   color: white;
+ }
+ 
+ footer table {
+   color: white;
+ }
+ 
+ .tabletitle {
+   font-size: 18px;
+   font-weight: 600;
+   padding-bottom: 10px;
+ }
+ 
+ li {
+   margin-left: -23px;
+   margin-bottom: 6px;
+ }
+ 
+ ul {
+   margin-top: 14px;
+ }
